@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "931d380a-413e-4211-aa95-75c8328c9bfc",
+		"name": "Rent A Car",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39132021"
+	},
+	"item": [
+		{
+			"name": "Offer methods",
+			"item": [
+				{
+					"name": "Create Offer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"customerName\": \"Halid  Hasanliev\",\n    \"customerPhone\": \"0877150162\",\n    \"rentalDays\": 10,\n    \"car\": {\n        \"id\": 8\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/offers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"offers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Offers by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/offers/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"offers",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all offer from customer name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/offers/customer/Halid  Hasanliev",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"offers",
+								"customer",
+								"Halid  Hasanliev"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Offer by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"make\": \"Mercedes\",\n    \"model\": \"C63\",\n    \"location\": \"Plovdiv\",\n    \"pricePerDay\": 400,\n    \"available\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/offers/accept/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"offers",
+								"accept",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete offer by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/offers/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"offers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Car methods",
+			"item": [
+				{
+					"name": "Create Car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 12,\n  \"make\": \"BMW\",\n  \"model\": \"750i\",\n  \"location\": \"Sofia\",\n  \"pricePerDay\": 150.0,\n  \"available\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/cars",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Car by Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/cars/location/Plovdiv",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars",
+								"location",
+								"Plovdiv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Car by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/cars/id/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars",
+								"id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/cars",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update existing car by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"make\": \"Mercedes\",\n    \"model\": \"C63\",\n    \"location\": \"Plovdiv\",\n    \"pricePerDay\": 400,\n    \"available\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/cars/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete car by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/cars/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}
