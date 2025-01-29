@@ -1,0 +1,3 @@
+2025-01-27 16:28:32.933763+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from friends [*]and users"; SQL statement:
+select * from friends and users [42000-232]
