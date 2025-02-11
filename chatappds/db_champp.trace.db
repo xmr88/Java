@@ -1,3 +1,0 @@
-2025-02-04 00:45:19.782217+02:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (created_at,password,username,id) values (?,?,?,default)"; expected "identifier"; SQL statement:
-insert into user (created_at,password,username,id) values (?,?,?,default) [42001-232]
