@@ -1,1 +1,0 @@
-# bitcoin-and-sp500-price-prediction
